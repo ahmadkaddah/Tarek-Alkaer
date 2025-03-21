@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عدّاد الختمة - طريق الخير</title>
+    <link rel="stylesheet" href="khatmah.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">منصة طريق الخير</div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">الرئيسية</a>
+                <a href="#khatmah-tracker" class="nav-link">عداد الختمة</a>
+                <a href="#reading-plan-section" class="nav-link">خطة القراءة</a>
+                <a href="#footer" class="nav-link">حديث نبوي</a>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero">
+        <div class="container">
+            <h1>📚 عدّاد الختمة</h1>
+            <p class="hero-text">تابع تقدمك في ختم القرآن الكريم وواصل المسير نحو الختمة المباركة</p>
+        </div>
+    </section>
+
+    <section id="khatmah-tracker" class="khatmah-tracker-section">
+        <div class="container">
+            <div class="tracker-card">
+                <div class="progress-container">
+                    <h2>تقدمك في الختمة</h2>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="progress-bar">
+                            <span class="progress-text" id="progress-text">0%</span>
+                        </div>
+                    </div>
+                    <div class="progress-details">
+                        <div class="detail-item">
+                            <i class="fas fa-book-open"></i>
+                            <span>الجزء الحالي: <span id="current-juz">1</span></span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-file"></i>
+                            <span>الصفحة: <span id="current-page">1</span></span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-calendar-day"></i>
+                            <span>المتبقي: <span id="days-remaining">-</span> يوم</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="update-progress">
+                    <h2>تحديث التقدم</h2>
+                    <form id="progress-form">
+                        <div class="form-group">
+                            <label for="juz-select">الجزء الحالي:</label>
+                            <select id="juz-select" name="juz">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="page-select">الصفحة الحالية:</label>
+                            <select id="page-select" name="page">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="pages-read">عدد الصفحات المقروءة اليوم:</label>
+                            <input type="number" id="pages-read" name="pages-read" min="1" max="604" value="1">
+                        </div>
+                        <button type="submit" class="update-btn">
+                            <i class="fas fa-sync-alt"></i> تحديث التقدم
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="motivation-card">
+                <div class="quote-container">
+                    <i class="fas fa-quote-right quote-icon"></i>
+                    <p id="motivation-text" class="motivation-text"></p>
+                    <i class="fas fa-quote-left quote-icon"></i>
+                </div>
+            </div>
+
+            <div class="actions-container">
+                <button id="reset-btn" class="reset-btn">
+                    <i class="fas fa-redo"></i> إعادة ضبط التقدم
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <div id="confirmation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>تأكيد إعادة الضبط</h2>
+            <p>هل أنت متأكد من رغبتك في إعادة ضبط تقدمك في الختمة؟ لا يمكن التراجع عن هذا الإجراء.</p>
+            <div class="modal-actions">
+                <button id="confirm-reset" class="confirm-btn">نعم، إعادة الضبط</button>
+                <button id="cancel-reset" class="cancel-btn">إلغاء</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="celebration-modal" class="modal">
+        <div class="modal-content celebration">
+            <span class="close-celebration">&times;</span>
+            <h2>🎉 مبارك! 🎉</h2>
+            <p>لقد أتممت ختمة القرآن الكريم بفضل الله</p>
+            <p class="celebration-dua">اللهم تقبل منا إنك أنت السميع العليم</p>
+            <div class="modal-actions">
+                <button id="close-celebration" class="confirm-btn">الحمد لله</button>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <section id="reading-plan-section" class="reading-plan-section">
+        <div class="container">
+            <div class="reading-plan">
+                <h2><i class="fas fa-calendar-alt"></i> خطة القراءة المخصصة</h2>
+                <p class="plan-intro">حدد أهدافك في قراءة القرآن الكريم وسنساعدك في تنظيم خطة مناسبة لك</p>
+                <form id="reading-plan-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="plan-days"><i class="fas fa-clock"></i> عدد الأيام المتاحة:</label>
+                            <input type="number" id="plan-days" name="plan-days" min="1" value="30">
+                        </div>
+                        <div class="form-group">
+                            <label for="plan-khatmat"><i class="fas fa-book"></i> عدد الختمات المطلوبة:</label>
+                            <input type="number" id="plan-khatmat" name="plan-khatmat" min="1" value="1">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="plan-type"><i class="fas fa-tasks"></i> نوع الخطة:</label>
+                        <select id="plan-type" name="plan-type">
+                            <option value="pages">القرآن كاملاً</option>
+                            <option value="surah">سور محددة</option>
+                        </select>
+                    </div>
+                    <div id="surah-options" style="display: none;">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="start-surah"><i class="fas fa-play"></i> من سورة:</label>
+                                <select id="start-surah" name="start-surah"></select>
+                            </div>
+                            <div class="form-group">
+                                <label for="end-surah"><i class="fas fa-flag-checkered"></i> إلى سورة:</label>
+                                <select id="end-surah" name="end-surah"></select>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" id="calculate-plan-btn" class="btn">
+                        <i class="fas fa-calculator"></i> حساب الخطة
+                    </button>
+                </form>
+                <div id="plan-result" style="display: none;" class="plan-result">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class="footer">
+        <div class="container">
+            <p class="hadith">قال رسول الله ﷺ: «خيركم من تعلم القرآن وعلمه» (رواه البخاري)</p>
+            <p class="copyright">تم تصميم هذا الموقع لوجه الله... لا تنسونا من دعائكم ❤️</p>
+        </div>
+    </footer>
+
+    <canvas id="confetti-canvas"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="khatmah.js"></script>
+</body>
+
+</html>

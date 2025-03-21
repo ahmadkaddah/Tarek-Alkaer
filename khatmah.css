@@ -1,0 +1,740 @@
+:root {
+    --primary-color: #2E7D32;
+    --secondary-color: #81C784;
+    --accent-color: #F5EFE0;
+    --light-color: #FFFFFF;
+    --dark-color: #333333;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cairo', 'Reem Kufi', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.navbar {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: var(--shadow);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--light-color);
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-link {
+    color: var(--light-color);
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--dark-color);
+}
+
+.hero {
+    background: linear-gradient(#2E7D32, #81C784), url('https://source.unsplash.com/random/1600x900/?quran,mosque') no-repeat center center/cover;
+    color: var(--light-color);
+    text-align: center;
+    padding: 150px 0 100px;
+    margin-top: 60px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease;
+}
+
+.hero-text {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeInUp 1s ease;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.khatmah-tracker-section {
+    background-color: var(--light-color);
+    padding: 60px 0;
+}
+
+.tracker-card {
+    background-color: var(--light-color);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    padding: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.progress-container, .update-progress {
+    flex: 1;
+    min-width: 300px;
+}
+
+.progress-container h2, .update-progress h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.progress-container h2::after, .update-progress h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.progress-bar-container {
+    background-color: #f0f0f0;
+    border-radius: 30px;
+    height: 30px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar {
+    background: linear-gradient(to left, var(--primary-color), var(--secondary-color));
+    height: 100%;
+    border-radius: 30px;
+    width: 0%;
+    transition: width 1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-text {
+    color: var(--light-color);
+    font-weight: bold;
+    z-index: 1;
+}
+
+.progress-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.detail-item {
+    flex: 1;
+    min-width: 120px;
+    background-color: var(--accent-color);
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: var(--shadow);
+}
+
+.detail-item i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+select, input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Cairo', 'Reem Kufi', sans-serif;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+select:focus, input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(30, 132, 73, 0.2);
+}
+
+.update-btn {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-family: 'Cairo', 'Reem Kufi', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    justify-content: center;
+}
+
+.update-btn:hover {
+    background-color: #166f3d;
+    transform: translateY(-2px);
+}
+
+.motivation-card {
+    background-color: var(--light-color);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    padding: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.quote-container {
+    position: relative;
+    padding: 20px 40px;
+}
+
+.quote-icon {
+    color: var(--primary-color);
+    opacity: 0.2;
+    font-size: 2rem;
+    position: absolute;
+}
+
+.quote-container .fa-quote-right {
+    top: 0;
+    right: 0;
+}
+
+.quote-container .fa-quote-left {
+    bottom: 0;
+    left: 0;
+}
+
+.motivation-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--dark-color);
+    font-family: 'Reem Kufi', 'Cairo', sans-serif;
+}
+
+.actions-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.reset-btn {
+    background-color: #e74c3c;
+    color: var(--light-color);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-family: 'Cairo', 'Reem Kufi', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.reset-btn:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background-color: var(--light-color);
+    margin: 15% auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+    animation: slideIn 0.4s ease;
+}
+
+.close-modal, .close-celebration {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #aaa;
+    transition: var(--transition);
+}
+
+.close-modal:hover, .close-celebration:hover {
+    color: var(--dark-color);
+}
+
+.modal-content h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.modal-content p {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.confirm-btn, .cancel-btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-family: 'Cairo', 'Reem Kufi', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.confirm-btn {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border: none;
+}
+
+.confirm-btn:hover {
+    background-color: #166f3d;
+}
+
+.cancel-btn {
+    background-color: #f1f1f1;
+    color: var(--dark-color);
+    border: 1px solid #ddd;
+}
+
+.cancel-btn:hover {
+    background-color: #e1e1e1;
+}
+
+.modal-content.celebration {
+    background: linear-gradient(135deg, #f5efe0, #ffffff);
+    text-align: center;
+}
+
+.celebration h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.celebration-dua {
+    font-style: italic;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+#confetti-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1050;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: #166f3d;
+    transform: translateY(-5px);
+}
+
+.footer {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.hadith {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    font-family: 'Reem Kufi', 'Cairo', sans-serif;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-text {
+        font-size: 1rem;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background-color: var(--light-color);
+        box-shadow: var(--shadow);
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-link {
+        padding: 15px;
+        border-bottom: 1px solid #f1f1f1;
+    }
+    
+    .tracker-card {
+        flex-direction: column;
+    }
+    
+    .progress-details {
+        flex-direction: column;
+    }
+    
+    .modal-content {
+        width: 90%;
+        margin: 30% auto;
+    }
+}
+.reading-plan-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+    position: relative;
+}
+
+.reading-plan-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+}
+
+.reading-plan {
+    background-color: var(--light-color);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 35px;
+    max-width: 800px;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.reading-plan:hover {
+    transform: translateY(-5px);
+}
+
+.reading-plan h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 1.8rem;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.reading-plan h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.plan-intro {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.reading-plan .form-group {
+    margin-bottom: 20px;
+}
+
+.reading-plan label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.reading-plan label i {
+    margin-left: 8px;
+    color: var(--primary-color);
+}
+
+.reading-plan input,
+.reading-plan select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Cairo', 'Reem Kufi', sans-serif;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+.reading-plan input:focus,
+.reading-plan select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(30, 132, 73, 0.2);
+    background-color: #fff;
+}
+
+.reading-plan .btn {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Cairo', 'Reem Kufi', sans-serif;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 25px auto 0;
+    width: 220px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reading-plan .btn:hover {
+    background-color: #166f3d;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.reading-plan .btn:active {
+    transform: translateY(-1px);
+}
+
+.reading-plan .btn i {
+    margin-left: 8px;
+}
+
+.plan-result {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #e8f5f0;
+    border-radius: 10px;
+    border-right: 5px solid var(--primary-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    animation: fadeInUp 0.5s ease;
+}
+
+.plan-result-item {
+    margin-bottom: 15px;
+}
+
+.plan-result-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 8px;
+}
+
+.plan-result-item p {
+    margin: 10px 0;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+.plan-result-item strong {
+    color: #e74c3c;
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+#surah-options {
+    background-color: #f0f8f4;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 15px 0;
+    border: 1px dashed #ccc;
+    animation: fadeIn 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .reading-plan {
+        padding: 25px 20px;
+    }
+}

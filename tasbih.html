@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سبحة إلكترونية - طريق الخير</title>
+    <link rel="stylesheet" href="tasbih.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">منصة طريق الخير</div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">الرئيسية</a>
+                <a href="#tasbih-container" class="nav-link">السبحة</a>
+                <a href="#dhikr-section" class="nav-link">الأذكار</a>
+                <a href="#footer" class="nav-link">حديث نبوي</a>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero">
+        <div class="container">
+            <h1>🌿 سبحة إلكترونية</h1>
+            <p class="hero-text">استمتع بذكر الله أينما كنت</p>
+        </div>
+    </section>
+
+    <section id="tasbih-container" class="tasbih-section">
+        <div class="container">
+            <div class="tasbih-controls">
+                <div class="tasbih-mode">
+                    <label for="tasbih-count">عدد التسبيحات:</label>
+                    <select id="tasbih-count" class="tasbih-select">
+                        <option value="33">33</option>
+                        <option value="66">66</option>
+                        <option value="99">99</option>
+                        <option value="100">100</option>
+                    </select>
+                </div>
+                <div class="timer-container">
+                    <span id="timer">00:00:00</span>
+                    <button id="timer-toggle" class="btn timer-btn">
+                        <i class="fas fa-play"></i>
+                    </button>
+                </div>
+                <div class="reset-container">
+                    <button id="reset-btn" class="btn reset-btn">
+                        <i class="fas fa-redo-alt"></i> إعادة ضبط
+                    </button>
+                </div>
+            </div>
+
+            <div class="tasbih-display">
+                <div class="dhikr-container active" id="subhanallah-container">
+                    <h3 class="dhikr-title">سبحان الله</h3>
+                    <div class="counter-display">
+                        <span id="subhanallah-count">0</span>
+                        <span class="separator">/</span>
+                        <span id="subhanallah-target">33</span>
+                    </div>
+                </div>
+                <div class="dhikr-container" id="alhamdulillah-container">
+                    <h3 class="dhikr-title">الحمد لله</h3>
+                    <div class="counter-display">
+                        <span id="alhamdulillah-count">0</span>
+                        <span class="separator">/</span>
+                        <span id="alhamdulillah-target">33</span>
+                    </div>
+                </div>
+                <div class="dhikr-container" id="allahuakbar-container">
+                    <h3 class="dhikr-title">الله أكبر</h3>
+                    <div class="counter-display">
+                        <span id="allahuakbar-count">0</span>
+                        <span class="separator">/</span>
+                        <span id="allahuakbar-target">33</span>
+                    </div>
+                </div>
+                <div class="dhikr-container" id="lailaha-container">
+                    <h3 class="dhikr-title">لا إله إلا الله</h3>
+                    <div class="counter-display">
+                        <span id="lailaha-count">0</span>
+                        <span class="separator">/</span>
+                        <span id="lailaha-target">33</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tasbih-beads-container">
+                <div class="tasbih-string"></div>
+                <div class="beads-container" id="beads-container">
+                </div>
+                <div class="tasbih-button-container">
+                    <button id="tasbih-button" class="tasbih-button">
+                        <span class="current-dhikr">سبحان الله</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="save-progress">
+                <button id="save-btn" class="btn save-btn">
+                    <i class="fas fa-save"></i> حفظ التقدم
+                </button>
+                <button id="load-btn" class="btn load-btn">
+                    <i class="fas fa-upload"></i> استعادة التقدم
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <footer id="footer" class="footer">
+        <div class="container">
+            <p class="hadith">قال رسول الله ﷺ: "من سبح الله مائة مرة، غفرت له ذنوبه، وإن كانت مثل زبد البحر." (رواه
+                مسلم)</p>
+            <p class="copyright">تم تصميم هذا الموقع لوجه الله... لا تنسونا من دعائكم ❤️</p>
+        </div>
+    </footer>
+
+    <script src="tasbih.js"></script>
+</body>
+
+</html>

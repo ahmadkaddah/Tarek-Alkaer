@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مسابقة دينية - طريق الخير</title>
+  <link rel="stylesheet" href="quiz.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">منصة طريق الخير</div>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">الرئيسية</a>
+        <a href="#quiz-container" class="nav-link">المسابقة</a>
+        <a href="#leaderboard" class="nav-link">المتصدرون</a>
+        <a href="#footer" class="nav-link">حديث نبوي</a>
+      </div>
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <section id="hero" class="hero">
+    <div class="container">
+      <h1>🌿 مسابقة دينية</h1>
+      <p class="hero-text">اختبر معلوماتك الدينية وشارك في المسابقة</p>
+    </div>
+  </section>
+
+  <section id="quiz-container" class="quiz-section">
+    <div class="container">
+      <div class="quiz-wrapper">
+        <div id="quiz-start" class="quiz-start">
+          <h2>استعد للمسابقة!</h2>
+          <p>المسابقة تتكون من 10 أسئلة متنوعة في الدين الإسلامي</p>
+          <p>لديك 30 ثانية للإجابة على كل سؤال</p>
+          <button id="start-btn" class="btn primary-btn">
+            <i class="fas fa-play"></i> ابدأ المسابقة
+          </button>
+        </div>
+
+        <div id="quiz-questions" class="quiz-questions">
+          <div class="quiz-header">
+            <div class="quiz-score">
+              النتيجة: <span id="current-score">0</span> / <span id="total-questions">10</span>
+            </div>
+            <div class="quiz-timer">
+              الوقت المتبقي: <span id="timer">30</span> ثانية
+            </div>
+          </div>
+
+          <div class="question-container">
+            <h3 id="question-text">نص السؤال هنا</h3>
+            <div class="options-container" id="options-container">
+            </div>
+          </div>
+
+          <div id="answer-feedback" class="answer-feedback">
+            <div class="feedback-content">
+              <div id="feedback-text" class="feedback-text"></div>
+              <div id="explanation" class="explanation"></div>
+              <button id="next-btn" class="btn primary-btn">
+                <i class="fas fa-arrow-left"></i> السؤال التالي
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="quiz-results" class="quiz-results">
+          <h2>انتهت المسابقة!</h2>
+          <div class="results-container">
+            <div class="results-icon">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <p class="results-text">
+              مبارك عليك! لقد حصلت على
+              <span id="final-score">0</span> من
+              <span id="final-total">10</span>
+            </p>
+            <div class="results-message" id="results-message">
+            </div>
+          </div>
+
+          <div class="save-score-container">
+            <h3>احفظ نتيجتك في قائمة المتصدرين</h3>
+            <div class="save-score-form">
+              <input type="text" id="player-name" placeholder="أدخل اسمك" maxlength="20">
+              <button id="save-score-btn" class="btn accent-btn">
+                <i class="fas fa-save"></i> حفظ النتيجة
+              </button>
+            </div>
+          </div>
+
+          <div class="results-actions">
+            <button id="play-again-btn" class="btn primary-btn">
+              <i class="fas fa-redo"></i> العب مرة أخرى
+            </button>
+            <button id="view-leaderboard-btn" class="btn secondary-btn">
+              <i class="fas fa-list-ol"></i> عرض المتصدرين
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="leaderboard" class="leaderboard-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>قائمة المتصدرين</h2>
+        <p>أفضل 10 متسابقين حققوا أعلى النتائج</p>
+      </div>
+
+      <div class="leaderboard-container">
+        <table class="leaderboard-table">
+          <thead>
+            <tr>
+              <th>الترتيب</th>
+              <th>الاسم</th>
+              <th>النتيجة</th>
+              <th>التاريخ</th>
+            </tr>
+          </thead>
+          <tbody id="leaderboard-body">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <a href="#" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <footer id="footer" class="footer">
+    <div class="container">
+      <p class="hadith">قال رسول الله ﷺ: "من لا يشكر الناس لا يشكر الله." (رواه الترمذي)</p>
+      <p class="copyright">تم تصميم هذا الموقع لوجه الله... لا تنسونا من دعائكم ❤️</p>
+    </div>
+  </footer>
+
+  <script src="quiz.js"></script>
+</body>
+
+</html>

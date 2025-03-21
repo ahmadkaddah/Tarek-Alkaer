@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مواقف من السيرة النبوية - طريق الخير</title>
+    <link rel="stylesheet" href="seerah.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">منصة طريق الخير</div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">الرئيسية</a>
+                <a href="#stories-container" class="nav-link">المواقف</a>
+                <a href="#footer" class="nav-link">حديث نبوي</a>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero">
+        <div class="container">
+            <h1>📖 مواقف من السيرة النبوية</h1>
+            <p class="hero-text">تعرف على المواقف المؤثرة من حياة النبي محمد ﷺ</p>
+        </div>
+    </section>
+
+    <section id="stories-container" class="stories-section">
+        <div class="container">
+            <div class="search-filter-container">
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="ابحث عن موقف...">
+                    <button id="search-btn" class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+
+                <div class="filter-container">
+                    <span class="filter-label">تصفية حسب:</span>
+                    <div class="filter-buttons" id="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">الكل</button>
+                        <button class="filter-btn" data-filter="الصبر">الصبر</button>
+                        <button class="filter-btn" data-filter="الرحمة">الرحمة</button>
+                        <button class="filter-btn" data-filter="الحكمة">الحكمة</button>
+                        <button class="filter-btn" data-filter="الشجاعة">الشجاعة</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stories-grid" id="stories-grid">
+            </div>
+
+            <div id="no-results" class="no-results">
+                <i class="fas fa-search"></i>
+                <p>لم يتم العثور على نتائج مطابقة للبحث</p>
+            </div>
+        </div>
+    </section>
+
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <div id="story-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <h2 id="modal-title"></h2>
+                <div class="modal-tags" id="modal-tags"></div>
+                <div class="modal-story" id="modal-story"></div>
+                <div class="modal-actions">
+                    <button id="copy-btn" class="action-btn">
+                        <i class="fas fa-copy"></i> نسخ النص
+                    </button>
+                    <a id="whatsapp-share" class="action-btn whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> مشاركة عبر واتساب
+                    </a>
+                    <a id="telegram-share" class="action-btn telegram-btn" target="_blank">
+                        <i class="fab fa-telegram"></i> مشاركة عبر تلجرام
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer" class="footer">
+        <div class="container">
+            <p class="hadith">قال رسول الله ﷺ: «بلغوا عني ولو آية» (رواه البخاري)</p>
+            <p class="copyright">تم تصميم هذا الموقع لوجه الله... لا تنسونا من دعائكم ❤️</p>
+        </div>
+    </footer>
+
+    <script src="seerah.js"></script>
+</body>
+
+</html>

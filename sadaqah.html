@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صدقة جارية - طريق الخير</title>
+    <link rel="stylesheet" href="sadaqah.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">منصة طريق الخير</div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">الرئيسية</a>
+                <a href="#charity-grid" class="nav-link">أنواع الصدقات</a>
+                <a href="#footer" class="nav-link">حديث نبوي</a>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero">
+        <div class="container">
+            <h1>🌿 صدقة جارية</h1>
+            <p class="hero-text">ساهم في أعمال الخير التي يستمر أجرها</p>
+        </div>
+    </section>
+
+    <section id="charity-grid" class="charity-section">
+        <div class="container">
+            <div class="charity-grid" id="charity-container">
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>جاري تحميل أنواع الصدقات...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal" id="charity-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <h2 id="modal-title"></h2>
+                <div class="modal-image-container">
+                    <img id="modal-image" src="" alt="">
+                </div>
+                <div id="modal-description"></div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <footer id="footer" class="footer">
+        <div class="container">
+            <p class="hadith">قال رسول الله ﷺ: "إذا مات الإنسان انقطع عمله إلا من ثلاث: صدقة جارية، أو علم ينتفع به، أو ولد صالح يدعو له." (رواه مسلم)</p>
+            <p class="copyright">تم تصميم هذا الموقع لوجه الله... لا تنسونا من دعائكم ❤️</p>
+        </div>
+    </footer>
+
+    <script src="sadaqah.js"></script>
+</body>
+</html>

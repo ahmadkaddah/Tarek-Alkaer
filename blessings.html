@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سجل نعمة - طريق الخير</title>
+  <link rel="stylesheet" href="blessings.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">منصة طريق الخير</div>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">الرئيسية</a>
+        <a href="#blessings-container" class="nav-link">سجل النعم</a>
+        <a href="#quotes-slider" class="nav-link">أقوال مأثورة</a>
+        <a href="#footer" class="nav-link">آية قرآنية</a>
+      </div>
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <section id="hero" class="hero">
+    <div class="container">
+      <h1>🌸 سجل نعمة</h1>
+      <p class="hero-text">اكتب نعم الله عليك واشكر الله دائمًا</p>
+    </div>
+  </section>
+
+  <section id="blessings-container" class="blessings-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>سجل نعمك</h2>
+        <p>تذكر نعم الله عليك وسجلها هنا لتشكره عليها</p>
+        <div class="blessings-count">
+          عدد النعم التي سجلتها: <span id="blessings-count">0</span>
+        </div>
+      </div>
+
+      <div class="add-blessing-form">
+        <div class="form-group">
+          <textarea id="blessing-input" placeholder="اكتب نعمة من نعم الله عليك..." rows="3"></textarea>
+        </div>
+        <button id="add-blessing-btn" class="btn primary-btn">
+          <i class="fas fa-plus"></i> أضف النعمة
+        </button>
+      </div>
+
+      <div class="export-container">
+        <button id="export-pdf-btn" class="btn accent-btn">
+          <i class="fas fa-file-pdf"></i> تحميل نعمك
+        </button>
+      </div>
+
+      <div id="blessings-grid" class="blessings-grid">
+      </div>
+
+      <div id="empty-state" class="empty-state">
+        <div class="empty-icon">
+          <i class="fas fa-heart"></i>
+        </div>
+        <h3>لم تسجل أي نعمة بعد</h3>
+        <p>ابدأ بتسجيل نعم الله عليك لتتذكرها دائمًا</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="quotes-slider" class="quotes-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>أقوال عن الشكر</h2>
+        <p>اقوال مأثورة من القرآن والسنة عن شكر النعم</p>
+      </div>
+
+      <div class="quotes-slider-container">
+        <div class="quotes-slider" id="quotes-slider-content">
+        </div>
+        <div class="slider-controls">
+          <button id="prev-quote" class="slider-btn">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+          <button id="next-quote" class="slider-btn">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <a href="#" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <footer id="footer" class="footer">
+    <div class="container">
+      <p class="quran-verse">"وَإِن تَعُدُّوا نِعْمَتَ اللَّهِ لَا تُحْصُوهَا ۗ إِنَّ اللَّهَ لَغَفُورٌ رَّحِيمٌ"</p>
+      <p class="verse-reference">سورة النحل: 18</p>
+      <p class="copyright">تم تصميم هذا الموقع لوجه الله... لا تنسونا من دعائكم ❤️</p>
+    </div>
+  </footer>
+
+  <div id="pdf-template" class="pdf-template">
+    <h1>سجل النعم</h1>
+    <p class="pdf-date">تاريخ التصدير: <span id="export-date"></span></p>
+    <div id="pdf-blessings-list">
+    </div>
+    <p class="pdf-footer">"وَإِن تَعُدُّوا نِعْمَتَ اللَّهِ لَا تُحْصُوهَا ۗ إِنَّ اللَّهَ لَغَفُورٌ رَّحِيمٌ" (سورة
+      النحل: 18)</p>
+  </div>
+
+  <script src="blessings.js"></script>
+</body>
+
+</html>

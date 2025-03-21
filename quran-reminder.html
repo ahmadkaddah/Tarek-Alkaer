@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مذكر القرآن - طريق الخير</title>
+    <link rel="stylesheet" href="quran-reminder.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">منصة طريق الخير</div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">الرئيسية</a>
+                <a href="#quran-reminder" class="nav-link">آية اليوم</a>
+                <a href="#recommended-surahs" class="nav-link">سور مختارة</a>
+                <a href="#footer" class="nav-link">حديث نبوي</a>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero">
+        <div class="container">
+            <h1>🌿 مذكر القرآن</h1>
+            <p class="hero-text">ذكر الله بالقرآن، قلبك يرتاح مع كل آية</p>
+        </div>
+    </section>
+
+    <section id="quran-reminder" class="quran-reminder-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>آية اليوم</h2>
+                <p class="date" id="hijri-date">جاري تحميل التاريخ...</p>
+            </div>
+
+            <div class="verse-container">
+                <div class="verse-arabic" id="verse-arabic">
+                </div>
+                <div class="verse-info">
+                    <p class="verse-translation" id="verse-translation">
+                    </p>
+                    <p class="verse-reference" id="verse-reference">
+                    </p>
+                </div>
+                <div class="verse-actions">
+                    <button id="read-more-btn" class="btn primary-btn">
+                        <i class="fas fa-book-open"></i> اقرأ المزيد
+                    </button>
+                    <button id="listen-btn" class="btn accent-btn">
+                        <i class="fas fa-volume-up"></i> استمع للتلاوة
+                    </button>
+                    <button id="share-btn" class="btn secondary-btn">
+                        <i class="fas fa-share-alt"></i> شارك
+                    </button>
+                    <button id="change-verse-btn" class="btn change-verse-btn">
+                        <i class="fas fa-random"></i> آية أخرى
+                    </button>
+                </div>
+            </div>
+
+            <div class="reminder-settings">
+                <h3>إعدادات التذكير</h3>
+                <div class="settings-form">
+                    <div class="form-group">
+                        <label for="reminder-time">وقت التذكير اليومي:</label>
+                        <input type="time" id="reminder-time" value="05:00">
+                    </div>
+                    <div class="form-group">
+                        <label for="notification-enabled">تفعيل الإشعارات:</label>
+                        <label class="switch">
+                            <input type="checkbox" id="notification-enabled" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <button id="save-settings" class="btn primary-btn">
+                        <i class="fas fa-save"></i> حفظ الإعدادات
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="recommended-surahs" class="recommended-surahs-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>سور مختارة للقراءة اليومية</h2>
+                <p>سور يستحب قراءتها بشكل يومي لما فيها من فضل وبركة</p>
+            </div>
+
+            <div class="surahs-grid" id="surahs-grid">
+            </div>
+        </div>
+    </section>
+
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <div id="verse-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <h2 id="modal-verse-arabic"></h2>
+                <p class="modal-verse-translation" id="modal-verse-translation"></p>
+                <div class="tafseer-section">
+                    <h3>التفسير</h3>
+                    <p id="modal-tafseer"></p>
+                </div>
+                <div class="significance-section">
+                    <h3>فضل الآية</h3>
+                    <p id="modal-significance"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="surah-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <h2 id="modal-surah-name"></h2>
+                <p class="modal-surah-info" id="modal-surah-info"></p>
+                <div class="surah-text-section">
+                    <h3>نص السورة</h3>
+                    <div id="modal-surah-text" class="surah-text"></div>
+                </div>
+                <div class="surah-benefits">
+                    <h3>فضل السورة</h3>
+                    <p id="modal-surah-benefits"></p>
+                </div>
+                <div class="surah-audio">
+                    <h3>استمع للسورة</h3>
+                    <audio id="surah-audio-player" controls></audio>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer" class="footer">
+        <div class="container">
+            <p class="hadith">قال رسول الله ﷺ: "اقْرَؤُوا الْقُرْآنَ فَإِنَّهُ يَأْتِي يَوْمَ الْقِيَامَةِ شَفِيعًا
+                لِصَاحِبِهِ." (رواه مسلم)</p>
+            <p class="copyright">تم تصميم هذا الموقع لوجه الله... لا تنسونا من دعائكم ❤️</p>
+        </div>
+    </footer>
+
+    <script src="quran-reminder.js"></script>
+</body>
+
+</html>
